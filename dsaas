@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Quote Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: transparent; /* Fully transparent background */
+        }
+
+        .quote-container {
+            position: relative;
+            padding: 0px 50px; 
+            max-width: 1000px; 
+            text-align: center;
+            border-radius: 12px;
+            background-color: transparent; /* Fully transparent container */
+        }
+
+        .quote-container::before {
+            content: '“';
+            position: absolute;
+            top: -20px; 
+            left: 0;
+            font-size: 60px; 
+            color: #FFD700; /* Gold color */
+            font-family: 'Georgia', serif;
+        }
+
+        .quote-container::after {
+            content: '”';
+            position: absolute;
+            bottom: 0; 
+            right: 0;
+            font-size: 60px; 
+            color: #FFD700; /* Gold color */
+            font-family: 'Georgia', serif;
+        }
+
+        .quote-text {
+            font-size: 1.4em; 
+            line-height: 1.6; 
+            color: #ffffff; /* White color for text */
+            margin: 0;
+            font-style: italic;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            font-size: 1em; 
+            font-weight: bold;
+            color: #ffffff; /* White color for author */
+        }
+
+        .quote-author::before {
+            content: "— ";
+        }
+
+        @media (max-width: 768px) {
+            .quote-container {
+                padding: 0px 20px; 
+                max-width: 100%;
+            }
+
+            .quote-container::before, 
+            .quote-container::after {
+                font-size: 40px; 
+            }
+
+            .quote-text {
+                font-size: 1.2em; 
+            }
+
+            .quote-author {
+                font-size: 0.9em; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quote-container">
+        <p class="quote-text">Science is about solving problems that affect people's lives.</p>
+        <p class="quote-author">George M. Whitesides</p>
+    </div>
+
+<script>
+parent.document.getElementsByTagName('iframe')[0].scrolling="no";
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</body>
+</html>
